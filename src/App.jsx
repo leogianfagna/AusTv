@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { news } from "./data/news";
+import { news } from "./assets/data/news";
 import NewsSection from "./components/NewsSection";
 import "./App.css";
 
