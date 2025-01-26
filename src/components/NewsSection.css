@@ -1,0 +1,73 @@
+:root {
+    --background-color: #171615;
+    --info-text-color: #c6c9ce;
+}
+
+body {
+    font-size: 1.1rem;
+    font-family: 'Poppins-Regular', sans-serif;
+    background-color: var(--background-color);
+    color: white;
+}
+
+.news-description {
+    color: var(--info-text-color);
+}
+
+.news-image {
+    background-image: url(/src/assets/images/test.png);
+}
+
+.news-type {
+    font-family: 'Poppins-Bold', sans-serif;
+    font-size: 0.95rem;
+}
+
+.news-date {
+    font-size: 0.95rem;
+    color: #8f95a0;
+}
+
+.news-separator {
+    font-size: 0.95rem;
+    color: #e5e7eb;
+}
+
+.news-title {
+    font-family: 'Poppins-Bold', sans-serif;
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #353840;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('/src/assets/fonts/Poppins-Regular.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('/src/assets/fonts/Poppins-Bold.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
