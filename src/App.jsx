@@ -4,14 +4,14 @@ import { news } from "./assets/data/news";
 import NewsSection from "./components/NewsSection";
 import "./App.css";
 import Calendar from "./components/Calendar";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <>
-      <div className="container">
-        <Calendar />
-      </div>
+      <NavBar />
       <NewsSection news={news} />
+      <Calendar />
     </>
   );
 }

@@ -136,7 +136,7 @@ const Calendar = () => {
   };
 
   return (
-    <div>
+    <section id="eventos" className="container px-4" style={{ "marginTop": "3rem" }}>
       <div className="text-center mb-5">
         <h2 className="news-title mb-0">Eventos</h2>
         <p className="news-description">
@@ -174,7 +174,7 @@ const Calendar = () => {
           </tbody>
         </table>
       </div>
-    </div>
+    </section>
   );
 };
 

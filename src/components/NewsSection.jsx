@@ -9,7 +9,7 @@ const NewsSection = ({ news }) => {
 
 
   return (
-    <section className="container px-4" style={{ "marginTop": "3rem" }}>
+    <section id="novidades" className="container px-4" style={{ "marginTop": "3rem" }}>
       <div className="text-center mb-5">
         <h2 className="news-title mb-0">Novidades da AusTv</h2>
         <p className="news-description">
