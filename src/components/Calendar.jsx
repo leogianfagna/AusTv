@@ -157,7 +157,7 @@ const Calendar = () => {
           <thead>
             <tr>
               {daysOfWeek.map((day, index) => (
-                <td key={index}>{day}</td>
+                <td key={index} style={{fontWeight: "bold"}}>{day}</td>
               ))}
             </tr>
           </thead>
