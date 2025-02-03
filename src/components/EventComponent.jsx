@@ -21,7 +21,7 @@ const EventComponent = ({ event, i, hour }) => {
     },
     {
       name: "duelodepoções",
-      desc: "Elimine seu adversário no duelo e avance de fase até chegar na final.\n\nMelhor estratégia: jogue as poções para trás para não curar o oponente. Faça refil enquanto o adversário estiver longe.",
+      desc: "Quem gosta de um 1 contra 1? Enfrente adversários com uma espada e muita poção de vida e elimine seu adversário no duelo para avançar de fase até chegar na final. \n\nA melhor estratégia é sempre jogar as poções olhando um pouco para trás, você não vai querer curar seu adversário, não é? Lembre-se de fazer o refil enquanto o adversário estiver longe.",
     },
     {
       name: "foia",
@@ -161,7 +161,7 @@ const EventComponent = ({ event, i, hour }) => {
     const formatedName = eventName.replace(/\s+/g, "").toLowerCase();
     const eventObject = eventos.find((evento) => evento.name === formatedName);
 
-    return (eventObject) ? eventObject.desc : "Não encontrado";
+    return eventObject ? eventObject.desc : "Não encontrado";
   }
 
   function getEventIcon(eventName) {
@@ -198,9 +198,21 @@ const EventComponent = ({ event, i, hour }) => {
             src={
               "../src/assets/images/events/background/" +
               getEventIcon(event.lista[i])
-            } className="event-image"></img>
+            }
+            className="event-image"
+          ></img>
           <h1>{event.lista[i]}</h1>
-          <p>{getEventoDescription(event.lista[i])}</p>
+          {/* Descrição do evento na tag <p>. Feita dessa forma para usar \n como quebra de linha na descrição */}
+          <p>
+            {getEventoDescription(event.lista[i])
+              .split("\n")
+              .map((line, index) => (
+                <span key={index}>
+                  {line}
+                  <br />
+                </span>
+              ))}
+          </p>
         </Modal.Body>
       </Modal>
     </div>
