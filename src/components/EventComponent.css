@@ -1,0 +1,65 @@
+.event-div {
+  border: solid 1px;
+  height: 5rem;
+  background-color: #1c1b1a;
+  border-radius: 0.7rem;
+  border-color: #2b2a28;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.event-icon {
+  width: 40%;
+}
+
+.event-icon img {
+    width: 2.5rem;
+  }
+
+.event-button {
+  width: 40%;
+}
+
+.event-button button {
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: #81449c;
+  font-size: 0.95rem;
+  width: 3.3rem;
+  height: 2rem;
+  color: white;
+}
+
+.event-button button:hover {
+  background: #b078c9;
+  color: white;
+  font-size: 1.05em;
+  width: 3.7rem;
+  height: 2.2rem;
+}
+
+.event-name {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: start;
+}
+
+.event-name span {
+  color: #bb8ccf;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem !important;
+  opacity: 0.8;
+}
+
+.event-icon p,
+.event-name span,
+.event-name p {
+  margin: 0;
+  padding: 0;
+}

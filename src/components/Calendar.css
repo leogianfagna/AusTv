@@ -1,0 +1,25 @@
+.calendar-container {
+    width: 100%; /* Ocupa toda a largura do container */
+    overflow-x: auto; /* Ativa rolagem horizontal */
+    white-space: nowrap; /* Impede que as colunas quebrem para a próxima linha */
+    user-select: none;
+    cursor: grab;
+}
+
+.calendar-container:active {
+    cursor: grabbing;
+}
+
+.calendar-table {
+    width: calc(100% / 3 * 8); /* Mantém a largura proporcional */
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.calendar-table th,
+.calendar-table td {
+    text-align: center;
+    padding: 8px;
+    width: calc(100% / 8); /* Ajusta para todas as colunas */
+    min-width: 150px; /* Define um tamanho mínimo para as células */
+}
