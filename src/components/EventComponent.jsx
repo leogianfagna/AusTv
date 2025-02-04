@@ -174,7 +174,7 @@ const EventComponent = ({ event, i, hour }) => {
       <div className="event-icon">
         <img
           src={
-            "../src/assets/images/events/icons/" + getEventIcon(event.lista[i])
+            "/assets/images/events/icons/" + getEventIcon(event.lista[i])
           }
           alt="Imagem de evento"
         ></img>
@@ -196,7 +196,7 @@ const EventComponent = ({ event, i, hour }) => {
         <Modal.Body>
           <img
             src={
-              "../src/assets/images/events/background/" +
+              "/assets/images/events/background/" +
               getEventIcon(event.lista[i])
             }
             className="event-image"

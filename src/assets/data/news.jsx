@@ -8,7 +8,7 @@ const newsTypes = [
 
 const news = [
   {
-    image: "../src/assets/2025-01-22_verao.png",
+    image: "/assets/images/news/2025-01-22_verao.png",
     title: "Verão da AusTv",
     type: newsTypes[2],
     date: "24/01/2025",
@@ -17,7 +17,7 @@ const news = [
       "Uma enorme onda de calor está por vir, trazendo diversas novidades e mecânicas para a comunidade. Vista seu chapéu e agarre uma água de coco pois vai ferver!",
   },
   {
-    image: "../src/assets/2025-01-22_pet_rodolfo.png",
+    image: "/assets/images/news/2025-01-22_pet_rodolfo.png",
     title: "Novo pet natalino Rodolfo",
     type: newsTypes[0],
     date: "18/01/2025",
@@ -26,7 +26,7 @@ const news = [
       "Adicione a sua coleção o novo pet, o Rodolfo. Um pet colecionável que só pode ser obtido durante o Natal de 2024.",
   },
   {
-    image: "../src/assets/2025-01-22_cosmetico_natal.png",
+    image: "/assets/images/news/2025-01-22_cosmetico_natal.png",
     title: "Novos cosméticos de Natal",
     type: newsTypes[0],
     date: "20/12/2024",
@@ -35,7 +35,7 @@ const news = [
       "Compre com /guardaroupa loja, aproveite esses cosméticos baratos e colecionáveis!",
   },
   {
-    image: "../src/assets/2025-01-22_presentes_natal.png",
+    image: "/assets/images/news/2025-01-22_presentes_natal.png",
     title: "Entrega de presentes",
     type: newsTypes[2],
     date: "16/12/2024",
