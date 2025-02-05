@@ -13,7 +13,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav style={{ marginTop: "1rem" }} className="container px-4">
+    <nav style={{ marginTop: "1rem" }} className="container-md px-4">
       <div className="nav-links">
         <a className="active">HOME</a>
         <a href="https://loja.austv.net/">LOJA</a>
