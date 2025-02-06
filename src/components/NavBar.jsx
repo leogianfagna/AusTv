@@ -29,11 +29,11 @@ const NavBar = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="#action1" className="active">
+            <Nav.Link className="active">
               HOME
             </Nav.Link>
-            <Nav.Link href="#action2">LOJA</Nav.Link>
-            <Nav.Link href="#action2">WIKI</Nav.Link>
+            <Nav.Link href="https://loja.austv.net/">LOJA</Nav.Link>
+            <Nav.Link href="https://wiki.austv.net/">WIKI</Nav.Link>
             <NavDropdown
               title="PÁGINAS"
               id="navbarScrollingDropdown"
@@ -45,8 +45,8 @@ const NavBar = () => {
               }}
               show={menuOpen}
             >
-              <NavDropdown.Item href="#action3">Novidades</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">Eventos</NavDropdown.Item>
+              <NavDropdown.Item href="#novidades">Novidades</NavDropdown.Item>
+              <NavDropdown.Item href="#eventos">Eventos</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
@@ -57,9 +57,8 @@ const NavBar = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Button href="#action2" className="discord-invite"></Button>
+            <Button href="https://discord.com/invite/jdVxeGb" className="discord-invite"></Button>
             <Nav.Link
-              href="#action2"
               className="ip-invite"
               onClick={copyToClipboard}
             >
