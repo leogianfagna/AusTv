@@ -1,9 +1,16 @@
 import "./NavBar.css";
 import { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 
 const NavBar = () => {
   const [copied, setCopied] = useState(false);
   const ip = "jogar.austv.net";
+
+  const [menuOpen, toggleMenuOpen] = useState(false);
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(ip).then(() => {
@@ -13,36 +20,55 @@ const NavBar = () => {
   };
 
   return (
-    <nav style={{ marginTop: "1rem" }} className="container-md px-4">
-      <div className="nav-links">
-        <a className="active">HOME</a>
-        <a href="https://loja.austv.net/">LOJA</a>
-        <a href="https://wiki.austv.net/">WIKI</a>
-     
-        {/* Dropdown funcional com hover */}
-        <div className="dropdown-container">
-          <a className="dropdown-toggle">PÁGINAS</a>
-          <div className="dropdown-menu">
-            <a href="#novidades">Novidades</a>
-            <a href="#eventos">Eventos</a>
-          </div>
-        </div>
+    <Navbar expand="lg">
+      <Container>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="my-2 my-lg-0 nav-links items-gap justify-content-center flex-grow-1"
+            style={{ maxHeight: "100px" }}
+            navbarScroll
+          >
+            <Nav.Link href="#action1" className="active">
+              HOME
+            </Nav.Link>
+            <Nav.Link href="#action2">LOJA</Nav.Link>
+            <Nav.Link href="#action2">WIKI</Nav.Link>
+            <NavDropdown
+              title="PÁGINAS"
+              id="navbarScrollingDropdown"
+              onMouseEnter={() => {
+                toggleMenuOpen(true);
+              }}
+              onMouseLeave={() => {
+                toggleMenuOpen(false);
+              }}
+              show={menuOpen}
+            >
+              <NavDropdown.Item href="#action3">Novidades</NavDropdown.Item>
+              <NavDropdown.Item href="#action4">Eventos</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
 
-      </div>
-      <div>
-        <a
-          className="discord-invite"
-          href="https://discord.com/invite/jdVxeGb"
-        ></a>
-        <a
-          className="ip-invite"
-          onClick={copyToClipboard}
-          style={{ cursor: "pointer" }}
-        >
-          {copied ? "IP COPIADO!" : ip.toUpperCase()}{" "}
-        </a>
-      </div>
-    </nav>
+        <Navbar.Collapse className="mobile-nav-icons">
+          <Nav
+            className="my-2 my-lg-0 justify-content-center flex-grow-1 items-gap"
+            style={{ maxHeight: "100px" }}
+            navbarScroll
+          >
+            <Button href="#action2" className="discord-invite"></Button>
+            <Nav.Link
+              href="#action2"
+              className="ip-invite"
+              onClick={copyToClipboard}
+            >
+              {copied ? "IP COPIADO!" : ip.toUpperCase()}
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
