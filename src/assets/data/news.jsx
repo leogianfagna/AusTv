@@ -8,6 +8,24 @@ const newsTypes = [
 
 const news = [
   {
+    image: "/assets/images/news/2025-02-06_capa_3_anos.png",
+    title: "Capa lendária",
+    type: newsTypes[2],
+    date: "08/02/2025",
+    endDate: "09/02/2025",
+    description:
+      "Participe de uma Quiz sobre perguntas do servidor para ganhar um cosmético de capa de 3 anos de aniversário do servidor. Serão perguntas sobre diversidades do servidor e aquele que mais conhecer, mais acertará! As perguntas serão multiplas escolhas e cada acerto avança de fase. Ao chegar na fase 25, você ganha a capa. Cada fase avançada após isso, vai conceder 50 de cash para você!",
+  },
+  {
+    image: "/assets/images/news/2025-02-06_paredao_aniversario.png",
+    title: "Aniversário de 3 anos",
+    type: newsTypes[2],
+    date: "06/02/2025",
+    endDate: "07/02/2025",
+    description:
+      "Esperamos que todos possam aproveitar esse terceiro aniversário com muito otimismo e entusiasmo! Para comemorar, faremos eventos de aniversários! Participe do ENCONTRE O BOLO da AusTv para ganhar emblema raro de aniversário do servidor.",
+  },
+  {
     image: "/assets/images/news/2025-01-22_verao.png",
     title: "Verão da AusTv",
     type: newsTypes[2],
