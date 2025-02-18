@@ -8,6 +8,15 @@ const newsTypes = [
 
 const news = [
   {
+    image: "/assets/images/news/2025-02-18_siri.png",
+    title: "Últimos dias de siris",
+    type: newsTypes[2],
+    date: "18/02/2025",
+    endDate: "28/02/2025",
+    description:
+      "A coleta de siris nas praias de Henesys está acabando! Consiga o máximo que conseguir e troque as especiarias marinhas por itens muuuito legais usando /verao. Você tem até o final de fevereiro, aproveita que tá quente!",
+  },
+  {
     image: "/assets/images/news/2025-02-06_capa_3_anos.png",
     title: "Capa lendária",
     type: newsTypes[2],
