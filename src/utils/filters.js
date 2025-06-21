@@ -3,17 +3,18 @@ export function getFilteredEnchants(list, filters) {
     return [];
   }
 
-  const armors = ["ALL_HELMET", "ALL_CHESTPLATE", "ALL_LEGGINGS", "ALL_BOOTS"]
+  const armors = ["ALL_HELMET", "ALL_CHESTPLATE", "ALL_LEGGINGS", "ALL_BOOTS"];
   return list.filter((enchant) => {
-    // Verificar se é uma peça de armadura então precisa incluir enchants genéricos ALL_ARMOR
-    if (armors.includes(filters.applies)) {
-      if (enchant.applies.includes("ALL_ARMOR")) {
-        return true;
-      }
-    }
+    if (filters.applies) {
+      const isFilterArmor = armors.includes(filters.applies);
 
-    if (filters.applies && !enchant.applies.includes(filters.applies)) {
-      return false;
+      const appliesMatches =
+        enchant.applies.includes(filters.applies) || // Match direto
+        (isFilterArmor && enchant.applies.includes("ALL_ARMOR")); // Caso especial, pois qualquer peça de armadura deve aceitar ALL_ARMOR
+
+      if (!appliesMatches) {
+        return false;
+      }
     }
 
     if (
