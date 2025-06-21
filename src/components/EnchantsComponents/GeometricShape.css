@@ -1,0 +1,31 @@
+.item-pos {
+  position: absolute;
+}
+
+.item {
+  padding: 0;
+  margin: 0;
+  height: 100px;
+  width: 100px;
+  overflow: visible;
+  pointer-events: none;
+}
+
+svg {
+  pointer-events: none;
+  cursor: pointer;
+}
+
+polygon {
+  pointer-events: visiblePainted;
+}
+
+text {
+  pointer-events: none;
+}
+
+.image-pixelated {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+

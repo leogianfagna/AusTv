@@ -1,0 +1,147 @@
+:root {
+  --slice-color: #ffffff36;
+}
+
+/* --- Estilos Originais --- */
+.enchant-builder-body {
+  background-color: #1e1e1e;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  overflow: hidden;
+  color: #b3b3b3;
+  font-size: clamp(12px, 0.9vw, 18px);
+}
+
+.grid1 {
+  padding: 1rem;
+  grid-area: 1 / 1 / 6 / 2;
+  overflow-y: auto;
+}
+
+.grid2 {
+  padding: 1rem;
+  grid-area: 1 / 2 / 6 / 3;
+}
+
+.grid3 {
+  padding: 1rem;
+  grid-area: 1 / 3 / 6 / 5;
+}
+
+.grid2-division {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(9, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 1rem;
+}
+
+.grid2-division .up {
+  grid-area: 1 / 1 / 6 / 2;
+  height: 100%;
+}
+
+.grid2-division .down {
+  grid-area: 6/ 1 / 10 / 2;
+  height: 100%;
+}
+
+.grid3-aligment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  padding: 0.8rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.1)
+    ),
+    linear-gradient(#000000, #000000),
+    linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0) 50%,
+      rgba(255, 255, 255, 0.1)
+    );
+  background-origin: border-box;
+  background-clip: padding-box, padding-box, border-box;
+  box-shadow: 0 7px 7px -2px rgba(0, 0, 0, 0.3),
+    0 8px 3px -2px rgba(0, 0, 0, 0.15);
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 20px;
+  border: 4px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #777;
+}
+
+/* Responsividade */
+@media (max-width: 1100px) {
+  .enchant-builder-body {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    overflow: auto;
+  }
+
+  .grid1 {
+    grid-area: 1 / 1 / 2 / 4;
+  }
+  .grid2 {
+    grid-area: 1 / 4 / 2 / 7;
+  }
+  .grid3 {
+    grid-area: 2 / 1 / 3 / 7;
+  }
+}
+
+@media (max-width: 600px) {
+  .enchant-builder-body {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: auto;
+  }
+}

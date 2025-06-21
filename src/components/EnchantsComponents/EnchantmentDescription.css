@@ -1,0 +1,39 @@
+.enchantment-description-box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  /* Espaçamento entre elementos */
+  & .enchant-selected {
+    flex: 0 0 25%;
+  }
+
+  & .enchant-description {
+    flex: 0 0 75%;
+  }
+}
+
+.enchant-selected {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  justify-items: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid var(--slice-color);
+  margin-bottom: 8px;
+
+
+  & .image-pixelated {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.enchantment-description {
+  font-size: 14px;
+}
+
+.selected-level {
+  color: #dbae87;
+}

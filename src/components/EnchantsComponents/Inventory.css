@@ -1,0 +1,9 @@
+.inventory-container {
+  background-color: #1E1E1E;
+  width: 600px;
+  height: 600px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
