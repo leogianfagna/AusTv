@@ -54,12 +54,6 @@ const EnchantmentDescription = ({ enchant }) => {
           <span>{enchant.display}</span>
           <div
             className="enchant-levels"
-            style={{
-              display: "flex",
-              gap: "10px",
-              cursor: "pointer",
-              width: "fit-content",
-            }}
           >
             {Array.from({ length: enchant.levels }, (_, index) => (
               <span key={index} onClick={() => setLevel(index)} className={level === index ? "selected-level" : ""}>

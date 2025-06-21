@@ -92,9 +92,6 @@ svg {
   box-sizing: border-box;
 }
 
-footer {
-  flex-shrink: 0;
-}
 
 ::-webkit-scrollbar {
   width: 16px;

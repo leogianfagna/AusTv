@@ -40,12 +40,6 @@ const EnchantBuilder = () => {
           <Inventory setApplyFilter={setApplyFilter} />
         </div>
       </div>
-
-      {/* <footer>
-        <p className="text-center" style={{ margin: "3rem" }}>
-          Copyright © 2025 AusTv. Todos os direitos reservados.
-        </p>
-      </footer> */}
     </main>
   );
 };

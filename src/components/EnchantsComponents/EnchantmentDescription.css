@@ -37,3 +37,10 @@
 .selected-level {
   color: #dbae87;
 }
+
+.enchant-levels {
+  display: flex;
+  width: fit-content;
+  gap: 10px;
+  cursor: pointer;
+}
