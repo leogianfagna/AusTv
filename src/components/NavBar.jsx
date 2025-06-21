@@ -5,6 +5,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [copied, setCopied] = useState(false);
@@ -29,9 +30,7 @@ const NavBar = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link className="active">
-              HOME
-            </Nav.Link>
+            <Nav.Link className="active">HOME</Nav.Link>
             <Nav.Link href="https://loja.austv.net/">LOJA</Nav.Link>
             <Nav.Link href="https://wiki.austv.net/">WIKI</Nav.Link>
             <NavDropdown
@@ -47,6 +46,9 @@ const NavBar = () => {
             >
               <NavDropdown.Item href="#novidades">Novidades</NavDropdown.Item>
               <NavDropdown.Item href="#eventos">Eventos</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/buildar">
+                Montar build
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
@@ -57,11 +59,11 @@ const NavBar = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Button href="https://discord.com/invite/jdVxeGb" className="discord-invite"></Button>
-            <Nav.Link
-              className="ip-invite"
-              onClick={copyToClipboard}
-            >
+            <Button
+              href="https://discord.com/invite/jdVxeGb"
+              className="discord-invite"
+            ></Button>
+            <Nav.Link className="ip-invite" onClick={copyToClipboard}>
               {copied ? "IP COPIADO!" : ip.toUpperCase()}
             </Nav.Link>
           </Nav>

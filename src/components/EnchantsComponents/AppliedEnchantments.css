@@ -1,0 +1,65 @@
+.item-build-box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  /* Espaçamento entre elementos */
+  & .item-build {
+    flex: 0 0 20%;
+  }
+
+  & .build-list {
+    flex: 0 0 70%;
+  }
+
+  & .save-build {
+    flex: 0 0 10%;
+    display: flex;
+  }
+
+  /* Todos os ícones nessa box são clicáveis */
+  & .material-symbols-outlined {
+    cursor: pointer;
+    user-select: none;
+  }
+}
+
+/* Customização individual */
+.item-build {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-build img {
+  height: 35px;
+  width: 35px;
+}
+
+.applied-enchantment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.build-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-bottom: 1px solid var(--slice-color);
+  border-top: 1px solid var(--slice-color);
+}
+
+.icon-list {
+  height: 50px;
+  width: 50px;
+}
+
+.save-build {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
