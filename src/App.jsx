@@ -6,7 +6,7 @@ import "./App.css";
 import Calendar from "./components/Calendar";
 import NavBar from "./components/NavBar";
 import EnchantBuilder from "./pages/EnchantBuilder";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
