@@ -49,6 +49,32 @@ const AppliedEnchantments = ({ applies, build, setBuild }) => {
     }));
   };
 
+  const renderWarning = (enchant) => {
+    let warning = false;
+
+    for (const key in build) {
+      if (key === applies) continue;
+      const valuesForKey = build[key];
+
+      valuesForKey.forEach((item) => {
+        if (item.id === enchant) {
+          warning = true;
+        }
+      });
+    }
+
+    if (warning) {
+      return (
+        <span
+          className="material-symbols-outlined"
+          style={{ fontSize: "0.8rem", color: "#a33737", cursor: "auto" }}
+        >
+          warning
+        </span>
+      );
+    }
+  };
+
   const renderEnchantment = (enchant) => {
     const display = enchant.display || "Slot disponível";
     const bookIcon =
@@ -61,6 +87,7 @@ const AppliedEnchantments = ({ applies, build, setBuild }) => {
         <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
           <img src={bookIcon} className="icon-list image-pixelated"></img>
           <span>{display}</span>
+          {renderWarning(enchant.id)}
         </div>
 
         {enchant.id && (
